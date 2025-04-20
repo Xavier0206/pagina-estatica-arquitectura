@@ -89,8 +89,10 @@ a {
 .btn {
   color: var(--gris);
   background-color: var(--blanco);
+  border-radius: 10px;
   border: 1px solid var(--gris);
   padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
   transition: all 0.3s ease;
 }
 
@@ -204,7 +206,60 @@ a {
   text-align: center;
 }
 
-/* Media 767 */
+/* Main Modelos */
+.main-modelo {
+  margin-top: 4rem;
+}
+
+.modelos-contenedor {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 1.5rem;
+}
+
+.modelo {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.modelo h4 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.modelo button {
+  width: 50%;
+}
+
+.modelo-img-1 {
+  background-image: url('/img/modelo_basico.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30rem;
+}
+
+.modelo-img-2 {
+  background-image: url('/img/modelo_elite.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30rem;
+}
+
+.modelo-img-3 {
+  background-image: url('/img/modelo_premier.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30rem;
+}
+
+/**============== Media 767 */
 @media (min-width: 767px) {
   .contenedor-header h1 {
     text-align: left;
@@ -243,5 +298,25 @@ a {
 
   .sobreNosotros-img {
     height: unset;
+  }
+
+  /* Main Modelos */
+  .modelos-contenedor {
+    row-gap: 1rem;
+  }
+
+  .modelo {
+    display: grid;
+    /* grid-template-rows: unset; */
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    align-items: start;
+  }
+
+  .modelo button {
+    position: absolute;
+    bottom: 2rem;
+    width: 40%;
+    left: 4rem;
   }
 }
